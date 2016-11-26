@@ -2,6 +2,7 @@ var app   = require('express')();
 var bodyParser = require("body-parser");
 var _ = require('underscore');
 
+var PORT = process.env.PORT || 3000;
 var book = [];
 var bookNextId = 1;
  
@@ -52,6 +53,6 @@ app.delete('/book/:id',function(req,res){
     }
 });
 
-app.listen(3000,function(){
-    console.log("Connected & Listen to port 3000");
+app.listen(PORT,function(){
+    console.log("Connected & Listen to port" + PORT);
 });
